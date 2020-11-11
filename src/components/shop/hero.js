@@ -13,7 +13,7 @@ const Hero = () => {
             id
             childImageSharp {
               fluid(maxWidth: 2000) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
