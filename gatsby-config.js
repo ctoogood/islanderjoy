@@ -1,8 +1,12 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Islander Joy`,
+    description: `Shetland Photographer - Prints for sale`,
+    author: `Joy Allan`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,6 +19,20 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `311319665`,
+      },
+    },
+    {
+      resolve: "gatsby-source-shopify",
+      options: {
+        shopName: process.env.GATSBY_SHOP_NAME,
+        accessToken: process.env.GATSBY_ACCESS_TOKEN,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -24,7 +42,14 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Amiri, Lato`],
+        display: "swap",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

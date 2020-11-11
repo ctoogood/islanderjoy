@@ -1,7 +1,14 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+import "./src/styles/main.scss"
+import React from "react"
+import { ProductContextProvider } from "./src/context/ProductContext"
+import { CartContextProvider } from "./src/context/CartContext"
+import UIkit from "uikit"
+import Icons from "uikit/dist/js/uikit-icons"
 
-// You can delete this file if you're not using it
+UIkit.use(Icons)
+
+export const wrapRootElement = ({ element }) => (
+  <ProductContextProvider>
+    <CartContextProvider>{element}</CartContextProvider>
+  </ProductContextProvider>
+)
