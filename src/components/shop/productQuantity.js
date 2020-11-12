@@ -27,9 +27,12 @@ const ProductQuantity = ({ variantId, available }) => {
   return (
     <div className="uk-position-relative">
       <form onSubmit={handleSubmit} className="uk-form-horizontal">
-        <label className="uk-form-label">Quantity</label>
+        <label htmlFor="quantity" className="uk-form-label">
+          Quantity
+        </label>
         <div className="uk-form-controls">
           <input
+            id="quantity"
             type="number"
             min="1"
             step="1"

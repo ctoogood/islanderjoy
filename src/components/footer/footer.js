@@ -46,7 +46,7 @@ const Footer = () => {
             <button
               data-uk-toggle="target: #contactForm"
               type="button"
-              className="uk-button uk-button-secondary uk-margin-top uk-margin-bottom"
+              className="uk-button uk-button-primary uk-margin-top uk-margin-bottom"
             >
               Contact
             </button>

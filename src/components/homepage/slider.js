@@ -7,7 +7,10 @@ import Img from "gatsby-image/withIEPolyfill"
 const Slider = () => {
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { relativeDirectory: { eq: "landscape" } }) {
+      allFile(
+        sort: { order: ASC, fields: name }
+        filter: { relativeDirectory: { eq: "portrait" } }
+      ) {
         edges {
           node {
             id
@@ -24,7 +27,7 @@ const Slider = () => {
   return (
     <div
       className="uk-position-relative uk-visible-toggle uk-light"
-      data-uk-slider
+      data-uk-slider="autoplay: true"
     >
       <div className="uk-position-absolute uk-position-z-index uk-position-center uk-padding-small">
         <h2
@@ -39,8 +42,8 @@ const Slider = () => {
           <li>
             <Img
               className="uk-width-1-1"
-              style={{ height: "80vh" }}
-              objectPosition="bottom"
+              style={{ height: "75vh" }}
+              objectPosition="center"
               fluid={image.node.childImageSharp.fluid}
             />
           </li>

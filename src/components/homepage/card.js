@@ -7,15 +7,10 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 const Card = () => {
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { relativeDirectory: { eq: "interior" } }) {
-        edges {
-          node {
-            id
-            childImageSharp {
-              fluid(maxWidth: 2000) {
-                ...GatsbyImageSharpFluid
-              }
-            }
+      file(relativeDirectory: { eq: "interior" }) {
+        childImageSharp {
+          fluid(maxWidth: 700) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -33,19 +28,18 @@ const Card = () => {
         }}
         data-uk-grid
       >
-        <div
-          class="uk-flex-last@s uk-card-media-right uk-cover-container uk-position-relative uk-visible-toggle uk-light"
+        {/* <div
+          class="uk-flex-last@s uk-card-media-right uk-cover-container uk-visible-toggle uk-light"
           data-uk-slider="autoplay: true"
         >
-          <ul class="uk-slider-items uk-child-width-1-1">
+          <ul class="uk-slider-items uk-child-width-1-1 uk-child-height-1-1">
             {data.allFile.edges.map(image => (
-              <li>
-                <Img
-                  className="uk-width-1-1"
-                  style={{ height: "100%" }}
-                  fluid={image.node.childImageSharp.fluid}
-                />
-              </li>
+              <li> */}
+        <Img
+          className="uk-flex-last@s"
+          fluid={data.file.childImageSharp.fluid}
+        />
+        {/* </li>
             ))}
           </ul>
           <button
@@ -58,9 +52,9 @@ const Card = () => {
             data-uk-slidenav-next
             uk-slider-item="next"
           ></button>
-        </div>
+        </div> */}
         <div>
-          <div class="uk-card-body">
+          <div class="uk-card-body uk-text-center uk-text-left@s">
             <h2 class="uk-card-title uk-text-lead">
               Photographic prints of the Shetland Islands
             </h2>

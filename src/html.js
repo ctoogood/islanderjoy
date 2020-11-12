@@ -13,6 +13,15 @@ export default function HTML(props) {
         />
         <script src="js/uikit.min.js" />
         <script src="js/uikit-icons.min.js" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400&display=swap"
+          rel="stylesheet"
+        />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

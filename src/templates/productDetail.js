@@ -170,7 +170,7 @@ export const ProductPageQuery = graphql`
         localFile {
           url
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 700) {
               src
               ...GatsbyImageSharpFluid_withWebp
             }

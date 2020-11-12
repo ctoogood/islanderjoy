@@ -24,7 +24,7 @@ const Hero = () => {
   return (
     <div
       className="uk-position-relative uk-visible-toggle uk-light"
-      data-uk-slider
+      data-uk-slider="autoplay: true"
     >
       <div className="uk-position-absolute uk-position-z-index uk-position-center uk-padding-small">
         <h2
@@ -39,7 +39,7 @@ const Hero = () => {
           <li>
             <Img
               className="uk-width-1-1"
-              style={{ height: "80vh" }}
+              style={{ height: "70vh" }}
               objectPosition="bottom"
               fluid={image.node.childImageSharp.fluid}
             />
