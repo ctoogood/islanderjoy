@@ -67,15 +67,21 @@ const Header = () => {
                     Shop
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    to="/cart"
-                    className="uk-icon uk-navbar-item uk-text-primary"
-                    data-uk-icon="cart"
-                  ></Link>
-                </li>
               </ul>
             </div>
+          </div>
+        </div>
+        <div className="uk-navbar-right">
+          <div>
+            <ul className="uk-navbar-nav">
+              <li>
+                <Link
+                  to="/cart"
+                  className="uk-icon uk-navbar-item uk-text-primary"
+                  data-uk-icon="cart"
+                ></Link>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
