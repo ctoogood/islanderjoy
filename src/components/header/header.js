@@ -1,5 +1,5 @@
-import { Link } from "gatsby"
 import React from "react"
+import { Link } from "gatsby"
 
 const Header = () => {
   return (
@@ -14,10 +14,7 @@ const Header = () => {
             className="uk-navbar-toggle uk-button"
             data-uk-navbar-toggle-icon
             data-uk-toggle="target: #mobile-menu"
-            href="#"
-          >
-            &nbsp;&nbsp;
-          </button>
+          />
         </div>
         <div className="uk-navbar-center">
           <Link className="uk-navbar-item uk-logo" to="/">
@@ -94,17 +91,17 @@ const Header = () => {
 
           <ul className="uk-nav uk-offcanvas-nav ">
             <li>
-              <Link className="" to="/" style={{ color: "black" }}>
+              <Link to="/" style={{ color: "black" }}>
                 Home
               </Link>
             </li>
             <li>
-              <Link className="" to="/about" style={{ color: "black" }}>
+              <Link to="/about" style={{ color: "black" }}>
                 About
               </Link>
             </li>
             <li>
-              <Link className="" to="/shop" style={{ color: "black" }}>
+              <Link to="/shop" style={{ color: "black" }}>
                 Shop
               </Link>
             </li>

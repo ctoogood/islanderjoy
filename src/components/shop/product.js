@@ -7,7 +7,6 @@ const Product = ({ product }) => {
   return (
     <Link
       className="uk-card uk-card-default uk-card-body productList__hover uk-margin-remove"
-      objectFit="contain"
       style={
         {
           // border: "0.5rem solid #383838",

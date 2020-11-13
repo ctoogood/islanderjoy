@@ -36,7 +36,7 @@ const ProductList = props => {
           }}
         >
           {props.data.products.edges.map(product => (
-            <Product product={product.node} key={product.id} />
+            <Product product={product.node} key={product.node.shopifyId} />
           ))}
         </section>
         <ul className="uk-pagination uk-position-relative">

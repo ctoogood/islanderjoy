@@ -37,9 +37,9 @@ const Slider = () => {
           Islander Joy
         </h2>
       </div>
-      <ul class="uk-slider-items uk-child-width-1-1">
+      <ul className="uk-slider-items uk-child-width-1-1">
         {data.allFile.edges.map(image => (
-          <li>
+          <li key={image.node.id}>
             <Img
               className="uk-width-1-1"
               style={{ height: "75vh" }}
@@ -50,12 +50,12 @@ const Slider = () => {
         ))}
       </ul>
       <button
-        class="uk-position-center-left uk-position-small uk-hidden-hover"
+        className="uk-position-center-left uk-position-small uk-hidden-hover"
         data-uk-slidenav-previous
         uk-slider-item="previous"
       ></button>
       <button
-        class="uk-position-center-right uk-position-small uk-hidden-hover"
+        className="uk-position-center-right uk-position-small uk-hidden-hover"
         data-uk-slidenav-next
         uk-slider-item="next"
       ></button>

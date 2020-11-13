@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Hero from "../components/about/hero"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -18,6 +19,7 @@ const About = () => {
   `)
   return (
     <Layout>
+      <SEO title="about" />
       <Hero />
       <section
         className="uk-margin-large-top uk-padding-small uk-child-width-1-2@s"

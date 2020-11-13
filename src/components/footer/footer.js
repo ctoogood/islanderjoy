@@ -17,13 +17,13 @@ const Footer = () => {
           <h2 className="uk-text-bold uk-text-muted">Islander Joy</h2>
         </div>
         <ul className="uk-list uk-flex-last@s">
-          <Link>
+          <Link to="/about">
             <li>About</li>
           </Link>
-          <Link>
+          <Link to="/pricing">
             <li>Printing</li>
           </Link>
-          <Link>
+          <Link to="/delivery">
             <li>Delivery</li>
           </Link>
         </ul>
@@ -64,17 +64,17 @@ const Footer = () => {
                 </div>
                 <div className="uk-modal-body">
                   <form>
-                    <fieldset class="uk-fieldset">
-                      <div class="uk-margin">
+                    <fieldset className="uk-fieldset">
+                      <div className="uk-margin">
                         <input
-                          class="uk-input"
+                          className="uk-input"
                           type="email"
                           placeholder="Your Email Address"
                         />
                       </div>
-                      <div class="uk-margin">
+                      <div className="uk-margin">
                         <textarea
-                          class="uk-textarea"
+                          className="uk-textarea"
                           rows="5"
                           placeholder="Enter Your Message Here..."
                         ></textarea>

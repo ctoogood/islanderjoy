@@ -19,7 +19,7 @@ const Card = () => {
   return (
     <>
       <div
-        class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s"
+        className="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s"
         style={{
           maxWidth: "1200px",
           margin: "auto",
@@ -54,8 +54,8 @@ const Card = () => {
           ></button>
         </div> */}
         <div>
-          <div class="uk-card-body uk-text-center uk-text-left@s">
-            <h2 class="uk-card-title uk-text-lead">
+          <div className="uk-card-body uk-text-center uk-text-left@s">
+            <h2 className="uk-card-title uk-text-lead">
               Photographic prints of the Shetland Islands
             </h2>
             <p>
@@ -67,7 +67,7 @@ const Card = () => {
             </p>
             <hr />
             <Link to="/shop">
-              <button class="uk-button uk-button-secondary">
+              <button className="uk-button uk-button-secondary">
                 View the Shop
               </button>
             </Link>
