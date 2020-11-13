@@ -76,6 +76,7 @@ const ProductDetail = ({ data: { shopifyProduct: product } }) => {
           <div>
             <BasicProductImageGallery
               images={product.images}
+              alt={product.title}
               selectedVariantImageId={variant?.image.id}
             />
           </div>
@@ -169,12 +170,6 @@ export const ProductPageQuery = graphql`
         id
         localFile {
           url
-          childImageSharp {
-            fluid(maxWidth: 700) {
-              src
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
         }
       }
     }

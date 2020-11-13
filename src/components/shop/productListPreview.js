@@ -1,7 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-// import { navigate } from "@reach/router"
-// import Gallery from "react-photo-gallery"
 import Product from "./product"
 
 const ProductListPreview = () => {
@@ -26,11 +24,7 @@ const ProductListPreview = () => {
             handle
             images {
               localFile {
-                childImageSharp {
-                  fluid(maxWidth: 300) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
+                url
               }
             }
           }
@@ -38,22 +32,6 @@ const ProductListPreview = () => {
       }
     }
   `)
-  // const photos = data.allShopifyProduct.edges.map(product => {
-  //   const photo = {}
-  //   photo.src = product.node.images[0].localFile.childImageSharp.original.src
-  //   photo.width =
-  //     product.node.images[0].localFile.childImageSharp.original.width
-  //   photo.height =
-  //     product.node.images[0].localFile.childImageSharp.original.height
-  //   photo.link = `shop/${product.node.handle}`
-
-  //   return photo
-  // })
-
-  // const linkTo = useCallback(async function (event, { photo, index }) {
-  //   await navigate(photo.link)
-  // }, [])
-
   return (
     <section
       className="uk-margin-large-top"
@@ -67,12 +45,6 @@ const ProductListPreview = () => {
         Latest Products
       </h1>
       <section className="productGrid">
-        {/* <Gallery
-          photos={photos}
-          direction={"column"}
-          margin={5}
-          onClick={linkTo}
-        /> */}
         {data.allShopifyProduct.edges.map(product => (
           <Product product={product.node} key={product.node.id} />
         ))}

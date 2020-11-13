@@ -11,6 +11,7 @@ const Header = () => {
       >
         <div className="uk-navbar-left">
           <button
+            aria-label="Menu Button"
             className="uk-navbar-toggle uk-button"
             data-uk-navbar-toggle-icon
             data-uk-toggle="target: #mobile-menu"

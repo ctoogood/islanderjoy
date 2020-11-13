@@ -1,9 +1,8 @@
 import { Link } from "gatsby"
-import Img from "gatsby-image"
 import React from "react"
 
 const Product = ({ product }) => {
-  const image = product.images[0].localFile.childImageSharp.fluid
+  const image = product.images[0].localFile.url
   return (
     <Link
       className="uk-card uk-card-default uk-card-body productList__hover uk-margin-remove"
@@ -16,7 +15,11 @@ const Product = ({ product }) => {
       }
       to={`/shop/${product.handle}`}
     >
-      <Img fluid={image} className="uk-height-1-1" />
+      <img
+        src={image}
+        style={{ objectFit: "cover", minHeight: "100%" }}
+        alt={product.title}
+      />
     </Link>
   )
 }

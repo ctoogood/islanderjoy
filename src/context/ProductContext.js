@@ -14,20 +14,6 @@ const query = graphql`
               amount
             }
           }
-          images {
-            localFile {
-              childImageSharp {
-                original {
-                  height
-                  width
-                  src
-                }
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
         }
       }
     }

@@ -9,8 +9,8 @@ const Thumbnail = ({ isActive, onClick, image }) => {
       className="uk-display-inline-block uk-margin-right"
       style={{ width: "100px", height: "100px", objectFit: "cover" }}
       type="image"
-      isActive={isActive}
-      src={image.localFile.childImageSharp.fluid.src}
+      isactive={isActive.toString()}
+      src={image.localFile.url}
       alt="Product Image"
       onClick={handleClick}
     />

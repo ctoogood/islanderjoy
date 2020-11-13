@@ -1,8 +1,7 @@
 import React, { useState } from "react"
-import Img from "gatsby-image"
 import Thumbnail from "./thumbnail"
 
-const BasicProductImageGallery = ({ selectedVariantImageId, images }) => {
+const BasicProductImageGallery = ({ selectedVariantImageId, images, alt }) => {
   const [activeImageThumbnail, setActiveImageThumbnail] = useState(
     images.find(({ id }) => id === selectedVariantImageId || images[0])
   )
@@ -34,7 +33,7 @@ const BasicProductImageGallery = ({ selectedVariantImageId, images }) => {
   return (
     <section>
       <div>
-        <Img fluid={activeImageThumbnail.localFile.childImageSharp.fluid} />
+        <img src={activeImageThumbnail.localFile.url} alt={alt} />
       </div>
       <div>{gallery}</div>
     </section>

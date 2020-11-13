@@ -84,11 +84,7 @@ export const query = graphql`
           title
           images {
             localFile {
-              childImageSharp {
-                fluid(maxWidth: 300) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
+              url
             }
           }
         }
